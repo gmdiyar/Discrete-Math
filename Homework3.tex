@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{document}
+\section{Introduction}
+
+If $x^2+5x$ is odd than $x$ is odd.
+
+\begin{proof}
+
+Contrapositive: if $x$ is even than $x^2+5x$ is even
+
+\begin{lemma}
+x is even if and only if $\exists K \in \mathbb{Z}, 2K = x$
+\end{lemma}
+
+Since $x = 2k$, we substitute $x$ for $2k$ in $x^2+5x$
+
+$(2k)^2+5(2k)$
+$4k^2+10k$
+
+We can factor out a $2$ from this expression
+
+$2(2k^2+5k)$ 
+
+The expression being multiplied by $2$ is an integer.
+Therefore, since $x$ is even (2k), $x^2+5x$ is even.
+
+QED the contrapositive is true so the original claim is also true.
+
+\end{proof}
+
+\being{proof}
+
+Given $x_1 < x_2$, if $f(x_1) > f(x_2)$ then $f(x)$ is not increasing
+
+\begin{lemma}
+$f(x)$ is increasing 
+\end{lemma}
+
+\end{proof}
+
+\end{document}

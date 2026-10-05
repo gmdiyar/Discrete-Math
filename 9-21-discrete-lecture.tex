@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amssymb} % Required for \mathbb
+
+\begin{document}
+
+\section{Direct Proofs}
+
+We are tying to prove 
+
+$\forall x \in \mathbb{R}, p(x) \iff q(x)$
+
+\\ \\ 
+
+strategy:
+1. assume the p(x) condition holds
+2. Unwind the formula definion to get something we can use to do
+calculations.
+3. Show calculations lead to q(x)
+4. repack an algorithm definition as a formal term to complete the process.
+
+EX: if m and n are even ints, then m + n is also even.
+How do we prove this to be generally true?
+
+firstly, lets let p(x) be our first proposition ( m and n are even).
+And q(x) be our second, which is m+n = even.
+
+applying our strategy, we assume p(x) is true (m and n are assumed even then).
+
+step two is to apply the formula/proof of an even number to m and n.
+[rewrite m + n as the new definitions of their values.]
+
+the sum then is 2(ksub1 + ksub2), which is even by the definition of an even number (which we assume is established).
+
+{two questions: are we assuming the definition of an even number, or have we proved that elsewhere? secondly, the proof of closure is also assume.}
+
+EX2 (direct proof of an odd integer)
+if m is even and n is odd, then mn is even
+
+again, assign p(x) and q(x) to our compound statements.
+
+assume p(x) (m in even n is odd)
+
+
+
+Take the defintion of an even number:
+there exists a number k in Z such that 2k = n]
+
+\section{More examples}
+
+prove: if $n$ is odd, $n^2$ is odd
+
+NOTE: for direct proofs, we want the first compount/p(x) to be 'simpler' than the second (q(x))
+
+question:{can we only use contrapositive indirect proofs when the variables are binary?}
+
+DEFN transitivity: A=B, B=C, then A=C
+
+\end{document}
