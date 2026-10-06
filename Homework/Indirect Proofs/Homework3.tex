@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
+%------------------------------------------------------------
+\section*{1.)}
+
+If $x^2 + 5x$ is odd then $x$ is odd.
+
+Contrapositive: if $x$ is even then $x^2 + 5x$ is even.
+
+A number $n$ is even iff $2k = n$.
+
+Since we're assuming $x$ is even, we can write it as $2k$.
+
+Likewise with $x^2 + 5x \Rightarrow (2k)^2 + 5(2k) \to 4k^2 + 10k$
+
+$2\underbrace{(2k^2 + 5k)}_{\text{int.}} \leftarrow$ Definitionally even.
+
+We assumed $x$ is even $(2k)$, and $x^2 + 5x$ also even $(2k)^2 + 5(2k)$ which proves true.
+
+\hfill $\square$ \quad Since the contrapositive is true, the original claim is true.
+
+\bigskip\hrule\bigskip
+
+%------------------------------------------------------------
+\section*{2.)}
+
+Given $x_1 < x_2$, if $\underbrace{f(x_1) > f(x_2)}_{p}$ then $\underbrace{f(x) \text{ is not increasing}}_{q}$.
+
+$\sim q \Rightarrow \sim p =$ Given $x_1 < x_2$, if $f(x)$ is increasing then $f(x_1) < f(x_2)$.
+
+$\bigstar$ $f(x)$ is increasing on domain $\mathbb{R}$ iff $\forall x \in \mathbb{R},\ \forall k > 0,\ f(x) < f(x + k)$.
+
+Let $x_2 - x_1 = k$. $k$ here is $> 0$ since $x_1 < x_2$.
+
+Since $k = x_2 - x_1$, we can rewrite it as
+
+$x_2 = x_1 + k$
+
+Using the definition, substituting $x = x_1$ and $k = x_2 - x_1$, so $x + k = x_2$
+
+$f(x_1) < f(x_2)$
+
+\hfill $\square$ \quad Therefore, given $x_1 < x_2$, when $f(x)$ is increasing then $f(x_1) < f(x_2)$.
+
+\bigskip\hrule\bigskip
+
+%------------------------------------------------------------
+\section*{3.)}
+
+If $\underbrace{f(x) = x^2}_{p}$ then $\underbrace{f(x) \text{ is not bounded above}}_{q}$.
+
+$p \to {\sim}q =$ if $f(x) = x^2$ then $f(x)$ is bounded above.
+
+$\bigstar$ $f(x)$ is bounded above iff $\exists K \in \mathbb{R},\ \forall x \in \mathbb{R},\ f(x) \leq K$
+
+
+Since $f(x)$ is $x^2$ in this case, we can sub $x^2$ for $f(x)$ in our definition:
+
+$\exists K \in \mathbb{R},\ \forall x \in \mathbb{R},\ x^2 \leq K$.
+
+Let $x = |K| + 1$ Since that guarantees $x > K$ always.
+
+Sub $|K| + 1$ for $x$ in $x^2$: $(|K| + 1)^2 \to K^2 + 2|K| + 1$
+
+  \[
+  \left.
+  \begin{aligned}
+  &K^2 \text{ is always } 0 \text{ or } > 0\\
+  &2|K| \text{ is always } 0 \text{ or } > 0\\
+  &1 \text{ is always } > 0
+  \end{aligned}
+  \right\} \text{all always greater than } K.
+  \]
+
+
+\hfill $\square$ \quad We have found an $x$ $(|K| + 1)$ where $x^2 > K$, which contradicts our claim. Therefore, the original claim must be true.
+
+\bigskip\hrule\bigskip
+
+%------------------------------------------------------------
+\section*{4.)}
+
+If $\underbrace{3 \mid (n^2 + 2)}_{p}$ $\to$ $\underbrace{3 \nmid n}_{q}$
+
+$p \to {\sim}q =$ If $3 \mid (n^2 + 2)$ then $3 \mid n$
+
+$\bigstar$ $a \mid b$ iff $\exists c \in \mathbb{Z},\ ac = b$.
+
+Using our definition, $3 \mid n = n = 3c$
+
+Similarly, $3 \mid (n^2 + 2) = n^2 + 2 = 3d$
+
+Since $n = 3c$, we can substitute $3c$ for $n$ in $n^2 + 2$
+
+$(3c)^2 + 2 = 3d \to 9c^2 + 2 = 3d \to 2 = 3d - 9c^2$
+
+$2 = 3\underbrace{(d - 3c^2)}_{m} = \underline{\underline{2 = 3m}} =$ by definition is $3 \mid 2$
+
+Which is false because $\frac{2}{3} \notin \mathbb{Z}$
+
+\hfill $\square$ \quad Therefore the original claim must be true.
+
+\end{document}
